@@ -1,14 +1,31 @@
-import React from "react";
-import { useGetCommitsQuery } from "../redux";
+import React, {useState, useEffect} from "react";
 import CommitsCell from "./CommitsCell";
+// import { useGetCommitsQuery } from "../redux";
 import style from "../Styles/commitsTable.module.css"
 
 
 const CommitsTable = () => {
 
 
-    const {data = [], isLoading} = useGetCommitsQuery()
-    if(isLoading) return <h2>Loading...</h2>
+    const [data, setData] = useState({})
+
+    useEffect(() => {
+        fetch('https://dpg.gg/test/calendar.json')
+            .then(res => {
+                if (res.ok) {
+                    return res.json()
+                }
+                throw res;
+            })
+            .then(data => {
+                setData(data)
+            })
+            .catch(e => {
+                console.lor(e)
+            })
+    }, [])
+
+    // if(isLoading) return <h2>Loading...</h2>
 
 
     const today = new Date()

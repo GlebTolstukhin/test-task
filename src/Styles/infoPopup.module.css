@@ -1,0 +1,45 @@
+.main {
+    width: 145px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    background: #000;
+    position: absolute;
+    z-index: 1;
+    bottom: 23px;
+    left: -65px;
+    padding: 5px 9px 6px 9px;
+}
+.triangle {
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-top: 14px solid black;
+    display: inline-block;
+    position: absolute;
+    right: 58px;
+}
+
+.commitsNumber {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+.commitsData {
+    color: #7C7C7C;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.closeArea {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: -150px;
+    top: -100px;
+}
